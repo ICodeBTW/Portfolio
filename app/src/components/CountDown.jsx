@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import GithubLink from "./GithubLink.astro";
 
 export default function CountDown({ title }) {
   const [timeLeft, setTimeLeft] = useState(864000); // 10 days in seconds
