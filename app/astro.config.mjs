@@ -1,17 +1,27 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-import tailwindcss from "@tailwindcss/vite";
-import react from "@astrojs/react";
-import cloudflare from "@astrojs/cloudflare";
+import cloudflare from '@astrojs/cloudflare';
+import react from '@astrojs/react';
 
-// https://astro.build/config
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineConfig({
-  // server: { port: 4321, host: "0.0.0.0"}, #dev
-  output: 'server',
-  adapter:  cloudflare(),
-  vite: {
-    plugins: [tailwindcss()]
-  },
+  output: 'static',
+  site: 'https://www.shreenidhi.dev',
 
-  integrations: [react()]
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true
+    }
+  }),
+
+  integrations: [react()],
+
+  vite: {
+    resolve: {
+      alias: import.meta.env.PROD && {
+        "react-dom/server": "react-dom/server.edge",
+      },
+    },
+    plugins: [tailwindcss()]
+  }
 });
