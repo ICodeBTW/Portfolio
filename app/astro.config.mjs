@@ -2,15 +2,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
-import awsAmplify from 'astro-aws-amplify';
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  // server: { port: 4321, host: "0.0.0.0"},
+  // server: { port: 4321, host: "0.0.0.0"}, #dev
   output: 'server',
-  adapter:  awsAmplify(),
-  // site: "https://www.shreenidhi.dev/",
-
+  adapter:  cloudflare(),
   vite: {
     plugins: [tailwindcss()]
   },
