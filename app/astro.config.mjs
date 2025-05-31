@@ -6,10 +6,10 @@ import awsAmplify from 'astro-aws-amplify';
 
 // https://astro.build/config
 export default defineConfig({
-  server: { port: 4321, host: "0.0.0.0"},
+  // server: { port: 4321, host: "0.0.0.0"},
   output: 'server',
   adapter:  awsAmplify(),
-  site: "https://www.shreenidhi.dev/",
+  // site: "https://www.shreenidhi.dev/",
 
   vite: {
     plugins: [tailwindcss()]
