@@ -1,4 +1,4 @@
-FROM node:22 AS base 
+FROM docker.io/node:23 AS base 
 
 # Install basic development tools
 RUN apt update && apt install -y less man-db sudo
