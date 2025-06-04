@@ -1,9 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CountDown from "../components/CountDown";
+import Hero from "../components/Hero.astro";
+import About from "../layouts/About.astro";
+import Contact from "../layouts/Contact.astro";
+import Work from "../layouts/Work.astro";
+
+// Styles
 import "../styles/global.css";
 ---
 
 <BaseLayout>
-  <CountDown title="Cooking up a site in" client:only="react" />
+  <main class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <Hero />
+    <!-- Work Section -->
+    <Work />
+    <!-- About Section -->
+    <About />
+    <!-- Contact Section -->
+    <Contact />
+  </main>
 </BaseLayout>

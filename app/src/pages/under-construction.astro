@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Status from "../components/Status.astro";
+---
+
+<BaseLayout>
+  <!-- Show construction for this specific page -->
+  <Status
+    type="construction"
+    message="This section is being crafted with care. Coming soon!"
+    showBackButton={false}
+  />
+</BaseLayout>

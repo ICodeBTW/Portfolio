@@ -1,0 +1,73 @@
+[
+  {
+    "id": "001",
+    "title": "Jenkins Shared Library - Gitlab CI migration",
+    "description": "Designed and developed curated Jenkins shared library/ pipelines in groovy for organization wide application teams with support for multiple languages including Java, JavaScript (Node) and Python which closely mimicked Gitlab CI/CD which included Docker, Kubernetes/ Helm.",
+    "skills": [
+      "Docker",
+      "Groovy",
+      "Python",
+      "SonarQube",
+      "GitLab-CI",
+      "Java",
+      "NodeJS",
+      "Jenkins",
+      "Maven",
+      "Gradle"
+    ],
+    "img": "/projects/jenkins.png",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2024-01-15",
+    "endDate": "2024-08-30",
+    "links": {
+      "github": {
+        "href": "https://github.com/ICodeBTW/microservices-migration",
+        "disabled": true
+      },
+      "demo": {
+        "href": "https://github.com/ICodeBTW/microservices-migration",
+        "disabled": true
+      }
+    },
+    "category": "infrastructure"
+  },
+  {
+    "id": "002",
+    "title": "Scholar Hub - Research Opportunities Platform",
+    "description": "A comprehensive full-stack web application that helps researchers discover and manage funding opportunities including grants and scholarships. Features personalized AI-powered recommendations, user authentication via Supabase, advanced filtering and search capabilities, bookmark management, and application tracking. Built with modern React frontend and Flask backend with Docker containerization.",
+    "skills": [
+      "React",
+      "Redux",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "Supabase",
+      "Docker",
+      "Tailwind CSS",
+      "Vite",
+      "REST APIs",
+      "Authentication",
+      "PostgreSQL",
+      "AI/ML Integration",
+      "Responsive Design",
+      "State Management"
+    ],
+    "img": "/projects/scholarhub.png",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2025-03-11",
+    "endDate": "2025-06-04",
+    "links": {
+      "github": {
+        "href": "https://github.com/yourusername/scholar-hub",
+        "disabled": true
+      },
+      "demo": {
+        "href": "https://scholar-hub-demo.com",
+        "disabled": true
+      }
+    },
+    "category": "fullstack"
+  }
+]
