@@ -12,13 +12,13 @@ export default defineConfig({
     "/blog":  "/under-construction"
   },
 
-  server: {host:true},
+  // server: {host:true},
 
-  // adapter: cloudflare({
-  //   platformProxy: {
-  //     enabled: true
-  //   }
-  // }),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true
+    }
+  }),
 
   integrations: [react()],
 
