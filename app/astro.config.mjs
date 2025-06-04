@@ -5,20 +5,21 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  output: 'static',
+
+  output: "static",
   site: 'https://www.shreenidhi.dev',
 
   redirects: {
     "/blog":  "/under-construction"
   },
 
-  server: {host:true},
+  // server: {host:true},
 
-  // adapter: cloudflare({
-  //   platformProxy: {
-  //     enabled: true
-  //   }
-  // }),
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true
+    }
+  }),
 
   integrations: [react()],
 

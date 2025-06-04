@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 
 const projectsCollection = defineCollection({
    
-  loader: file("/app/src/data/project.json", (data) => {
+  loader: file("src/data/project.json", (data) => {
     console.log("this is data",data);
   }),
   schema: z.object({
