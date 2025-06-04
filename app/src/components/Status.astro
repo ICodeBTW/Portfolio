@@ -1,0 +1,123 @@
+---
+
+
+import "../styles/global.css";
+
+ export interface Props {
+  type?: 'construction' | '404';
+  title?: string;
+  message?: string;
+  showBackButton?: boolean;
+}
+
+const { 
+  type = 'construction',
+  title,
+  message,
+  showBackButton = true 
+} = Astro.props;
+
+// Default content based on type
+const defaults = {
+  construction: {
+    title: 'Under Construction',
+    message: 'The content you\'re looking for is currently under construction. Check back in sometime.',
+    icon: 'construction'
+  },
+  404: {
+    title: 'Page Not Found',
+    message: 'Sorry, the page you\'re looking for doesn\'t exist or has been moved.',
+    icon: 'notFound'
+  }
+};
+
+const config = defaults[type];
+const finalTitle = title || config.title;
+const finalMessage = message || config.message;
+---
+
+<div class="min-h-screen bg-white flex flex-col items-center justify-center px-6">
+  <div class="text-center max-w-md">
+    <!-- Icon -->
+    <div class="mb-8">
+      {config.icon === 'construction' ? (
+        <!-- Construction/Lab Icon -->
+        <svg 
+          class="w-16 h-16 text-gray-300 mx-auto" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="1.5" 
+            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+          >
+          </path>
+        </svg>
+      ) : (
+        <!-- 404 Search Icon -->
+        <svg 
+          class="w-16 h-16 text-gray-300 mx-auto" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="1.5" 
+            d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.87 0-5.54 1.28-7.34 3.5A9.966 9.966 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.966 9.966 0 01-10-2z"
+          >
+          </path>
+        </svg>
+      )}
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-light text-gray-900 mb-4">
+      {finalTitle}
+    </h1>
+    
+    <!-- Message -->
+    <p class="text-gray-600 leading-relaxed mb-8 font-light">
+      {finalMessage}
+    </p>
+
+    <!-- Navigation -->
+    {showBackButton && (
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+        >
+          <svg 
+            class="w-4 h-4 mr-2" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            >
+            </path>
+          </svg>
+          Back to Home
+        </a>
+        
+        {type === '404' && (
+          <a 
+            href="/blog" 
+            class="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
+          >
+            Browse Blog
+          </a>
+        )}
+      </div>
+    )}
+  </div>
+</div>

@@ -8,11 +8,17 @@ export default defineConfig({
   output: 'static',
   site: 'https://www.shreenidhi.dev',
 
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    }
-  }),
+  redirects: {
+    "/blog":  "/under-construction"
+  },
+
+  server: {host:true},
+
+  // adapter: cloudflare({
+  //   platformProxy: {
+  //     enabled: true
+  //   }
+  // }),
 
   integrations: [react()],
 
