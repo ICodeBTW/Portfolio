@@ -1,9 +1,7 @@
 ---
-type Link = {
-  content: string;
-  href: string;
-  classes: string;
-};
+import CustomLink from "./UI/CustomLink.astro";
+import type { Link } from "./UI/CustomLink.astro";
+
 type Hero = {
   title: string;
   content: string;
@@ -23,6 +21,7 @@ const defaultHeroValues: Hero = {
       href: "#work",
       classes:
         "bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-sm font-medium",
+      target: "_self",
     },
     {
       content: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -34,10 +33,12 @@ const defaultHeroValues: Hero = {
       href: "https://github.com/ICodeBTW",
       classes:
         "text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium flex items-center space-x-2",
+      target: "_self",
     },
     {
       content: "Download resume",
       href: "resume/Resume.pdf",
+      target: "_blank",
       classes:
         "bg-transparent hover:bg-gray-300 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded-full",
     },
@@ -62,11 +63,7 @@ const {
     <div class="flex items-center space-x-6">
       {
         links.map((link: Link) => {
-          return (
-            <a href={link.href} class:list={[link.classes]}>
-              <Fragment set:html={link.content} />
-            </a>
-          );
+          return <CustomLink link={link} />;
         })
       }
     </div>
