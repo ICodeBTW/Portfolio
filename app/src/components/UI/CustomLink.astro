@@ -1,0 +1,18 @@
+---
+export type Link = {
+  content: string;
+  href: string;
+  classes: string;
+  target: astroHTML.JSX.HTMLAttributeAnchorTarget;
+};
+
+interface Props {
+  link: Link;
+}
+
+const { link, ...rest } = Astro.props;
+---
+
+<a href={link.href} class:list={[link.classes]} target={link.target} {...rest}>
+  <Fragment set:html={link.content} />
+</a>
