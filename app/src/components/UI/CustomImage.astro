@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets";
+import type { BRAND } from "astro:schema";
+import type { ClientRouter } from "astro:transitions";
+
+const { src, classes, alt, ...rest } = Astro.props;
+---
+
+<Image class:list={classes} src={src} alt={alt} {...rest} />
