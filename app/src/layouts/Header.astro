@@ -1,0 +1,48 @@
+---
+import type { Link } from "../components/UI/CustomLink.astro";
+import CustomLink from "../components/UI/CustomLink.astro";
+
+const defaultNavValue: Array<Link> = [
+  {
+    content: "Blog",
+    classes: "text-gray-600 hover:text-gray-900 transition-colors text-sm",
+    href: "/blog",
+    target: "_self",
+  },
+  {
+    content: "Work",
+    classes: "text-gray-600 hover:text-gray-900 transition-colors text-sm",
+    href: "/work",
+    target: "_self",
+  },
+  {
+    content: "Contact",
+    classes: "text-gray-600 hover:text-gray-900 transition-colors text-sm",
+    href: "/#contact",
+    target: "_self",
+  },
+];
+
+const defaultNavTitle: Link = {
+  target: "_self",
+  content: `<h1 class="text-2xl font-light text-gray-900">Shreenidhi Bharadwaj</h1>`,
+  classes: "",
+  href: "/",
+};
+
+const { headerNavTitle = defaultNavTitle, headerNavLinks = defaultNavValue } =
+  Astro.props;
+---
+
+<header>
+  <nav class="border-b border-gray-100">
+    <div class="max-w-4xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        {(<CustomLink link={headerNavTitle} />)}
+        <div class="flex items-center space-x-8">
+          {headerNavLinks.map((link: Link) => <CustomLink link={link} />)}
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
