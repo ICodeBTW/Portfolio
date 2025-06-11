@@ -9,7 +9,7 @@ const projects = await getCollection("projectsCollection");
 const featuredProjects = projects.filter((project) => project.data.featured);
 ---
 
-<Section title="Selected Work" id="selected#work">
+<Section title="Selected Work" id="selectedwork">
   {
     featuredProjects.map((project) => {
       return <ProjectCard project={project.data} />;
