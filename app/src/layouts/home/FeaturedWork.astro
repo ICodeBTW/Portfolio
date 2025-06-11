@@ -2,14 +2,14 @@
 export const prerender = false;
 
 import { getCollection } from "astro:content";
-import Section from "./Section.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import Section from "../Section.astro";
 
 const projects = await getCollection("projectsCollection");
 const featuredProjects = projects.filter((project) => project.data.featured);
 ---
 
-<Section title="Selected Work" id="work">
+<Section title="Selected Work" id="selected#work">
   {
     featuredProjects.map((project) => {
       return <ProjectCard project={project.data} />;

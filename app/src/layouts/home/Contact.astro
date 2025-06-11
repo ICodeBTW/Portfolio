@@ -1,7 +1,7 @@
 ---
-import type { Link } from "../components/UI/CustomLink.astro";
-import CustomLink from "../components/UI/CustomLink.astro";
-import Section from "./Section.astro";
+import type { Link } from "../../components/UI/CustomLink.astro";
+import CustomLink from "../../components/UI/CustomLink.astro";
+import Section from "../Section.astro";
 
 type ContactValue = {
   content: string;
@@ -29,10 +29,6 @@ const defaultValues = {
     },
   ],
 };
-
-interface Props {
-  contact: ContactValue;
-}
 
 const { contact = defaultValues } = Astro.props;
 ---

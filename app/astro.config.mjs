@@ -10,7 +10,8 @@ export default defineConfig({
   site: 'https://www.shreenidhi.dev',
 
   redirects: {
-    "/blog":  "/under-construction"
+    "/blog":  "/under-construction",
+    "/work":  "/under-construction"
   },
 
   server: {host:true},
