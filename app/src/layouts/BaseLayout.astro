@@ -3,19 +3,22 @@ import slot from "astro:components";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <Analytics>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Shreenidhi Bharadwaj - SRE/Fullstack Developer</title>
-    </head>
-    <body>
-      <Header />
-      <slot />
-      <Footer />
-    </body>
-  </html>
+  <SpeedInsights>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shreenidhi Bharadwaj - SRE/Fullstack Developer</title>
+      </head>
+      <body>
+        <Header />
+        <slot />
+        <Footer />
+      </body>
+    </html>
+  </SpeedInsights>
 </Analytics>
