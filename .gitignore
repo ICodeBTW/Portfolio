@@ -2,3 +2,4 @@ app/dist
 app/.wrangler
 app/.astro
 app/node_modules
+app/.vercel
