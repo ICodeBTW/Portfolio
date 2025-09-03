@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 
 import tailwindcss from '@tailwindcss/vite';
-import vercelAdapter from '@astrojs/vercel';
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
 
@@ -16,9 +16,7 @@ export default defineConfig({
 
   server: {host:true},
 
-  adapter: vercelAdapter({
-    webAnalytics: true
-  }),
+  adapter: cloudflare(),
 
   integrations: [react()],
 
