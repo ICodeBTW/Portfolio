@@ -2,7 +2,6 @@
 import slot from "astro:components";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
-import Analytics from "@vercel/analytics/astro";
 ---
 
 <html lang="en">
@@ -12,10 +11,8 @@ import Analytics from "@vercel/analytics/astro";
     <title>Shreenidhi Bharadwaj - SRE/Fullstack Developer</title>
   </head>
   <body>
-    <Analytics>
-      <Header />
-      <slot />
-      <Footer />
-    </Analytics>
+    <Header />
+    <slot />
+    <Footer />
   </body>
 </html>
