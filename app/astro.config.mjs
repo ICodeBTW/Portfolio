@@ -11,7 +11,6 @@ export default defineConfig({
 
   redirects: {
     "/blog":  "/under-construction",
-    "/work":  "/under-construction"
   },
 
   server: {host:true},

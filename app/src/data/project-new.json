@@ -1,0 +1,183 @@
+[
+  {
+    "id": "001",
+    "title": "Jenkins Shared Library - Gitlab CI migration",
+    "description": "Designed and developed curated Jenkins shared library/pipelines in Groovy for organization wide application teams with support for multiple languages including Java, JavaScript (Node) and Python. Mimicked Gitlab CI/CD including Docker, Kubernetes and Helm.",
+    "skills": [
+      "Docker",
+      "Groovy",
+      "Python",
+      "SonarQube",
+      "GitLab-CI",
+      "Java",
+      "NodeJS",
+      "Jenkins",
+      "Maven",
+      "Gradle"
+    ],
+    "img": "/projects/jenkins.png",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2021-10-01",
+    "endDate": "2023-04-30",
+    "links": {
+      "github": {
+        "href": "https://github.com/ICodeBTW/jenkins-sharedlibrary",
+        "disabled": true
+      }
+    },
+    "category": "infrastructure"
+  },
+  {
+    "id": "002",
+    "title": "Scholar Hub - Research Opportunities Platform",
+    "description": "Comprehensive full-stack web application that helps researchers discover and manage funding opportunities including grants and scholarships. Features personalized AI-powered recommendations, user authentication via Supabase, advanced filtering and search capabilities, bookmark management, and application tracking. Built with React frontend, Flask backend, Docker, and deployed on AWS ECS/Fargate with CloudFront and Route 53.",
+    "skills": [
+      "React",
+      "Redux",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "Supabase",
+      "Docker",
+      "Tailwind CSS",
+      "Vite",
+      "REST APIs",
+      "Authentication",
+      "PostgreSQL",
+      "AI/ML Integration",
+      "AWS ECS",
+      "Terraform",
+      "CloudFront",
+      "Route 53"
+    ],
+    "img": "/projects/scholarhub.png",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2025-03-11",
+    "endDate": "2025-06-04",
+    "links": {
+      "github": {
+        "href": "https://github.com/unsw-cse-comp99-3900/capstone-project-2025-t1-25t1-9900-h12a-danish",
+        "disabled": true
+      },
+      "demo": {
+        "href": "https://scholarhub.me",
+        "disabled": true
+      }
+    },
+    "category": "fullstack"
+  },
+  {
+    "id": "003",
+    "title": "Three Tier Application - Project A",
+    "description": "Architected and deployed a scalable 3-tier web application demonstrating modern cloud-native patterns. Frontend built with Astro and React Islands, served via S3/CloudFront. Backend with Express.js on Nginx, containerized using Docker and deployed to AWS ECS Fargate with OIDC GitHub CI/CD. Automated infra provisioning using AWS CloudFormation.",
+    "skills": [
+      "Astro",
+      "React",
+      "Express.js",
+      "NodeJS",
+      "AWS ECS",
+      "AWS Fargate",
+      "S3",
+      "CloudFront",
+      "CloudFormation",
+      "Docker",
+      "OIDC",
+      "GitHub Actions"
+    ],
+    "img": "https://placehold.co/600x400/png",
+    "featured": false,
+    "status": "in-progress",
+    "startDate": "2023-06-01",
+    "endDate": "2023-09-01",
+    "links": {
+      "github": {
+        "href": "https://github.com/ICodeBTW/Project-A",
+        "disabled": false
+      }
+    },
+    "category": "fullstack"
+  },
+  {
+    "id": "004",
+    "title": "Project B - Fullstack with Kubernetes & GitOps",
+    "description": "Full-stack application paired with Kubernetes cluster and monitoring solution. Utilized GitOps practices with a separate repo for source-of-truth cluster configs and monitoring setup.",
+    "skills": [
+      "Kubernetes",
+      "Helm",
+      "GitOps",
+      "Docker",
+      "Prometheus",
+      "Grafana",
+      "React",
+      "Express.js",
+      "CI/CD"
+    ],
+    "img": "https://placehold.co/600x400/png",
+    "featured": false,
+    "status": "completed",
+    "startDate": "2024-02-01",
+    "endDate": "2024-05-01",
+    "links": {
+      "github": {
+        "href": "https://github.com/ICodeBTW/Project-B",
+        "disabled": false
+      }
+    },
+    "category": "devops"
+  },
+  {
+    "id": "005",
+    "title": "Portfolio Website",
+    "description": "Personal portfolio website showcasing projects and experience. Built with Astro and React, styled with TailwindCSS, and deployed on modern hosting platforms.",
+    "skills": [
+      "Astro",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Netlify/Vercel",
+      "Responsive Design"
+    ],
+    "img": "/projects/portfolio.png",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2023-05-01",
+    "endDate": "2023-06-01",
+    "links": {
+      "github": {
+        "href": "https://github.com/ICodeBTW/portfolio",
+        "disabled": false
+      },
+      "live": {
+        "href": "https://shreenidhi.dev",
+        "disabled": false
+      }
+    },
+    "category": "web"
+  },
+  {
+    "id": "006",
+    "title": "GitHub to Claude AI",
+    "description": "Browser extension to upload GitHub repositories directly to Claude AI for analysis and interaction.",
+    "skills": [
+      "JavaScript",
+      "Browser Extensions",
+      "GitHub API",
+      "Automation"
+    ],
+    "img": "https://placehold.co/600x400/png",
+    "featured": false,
+    "status": "in-progress",
+    "startDate": "2024-07-01",
+    "endDate": "2024-08-15",
+    "links": {
+      "github": {
+        "href": "https://github.com/ICodeBTW/github-to-claude-ai",
+        "disabled": false
+      }
+    },
+    "category": "ai"
+  } 
+ 
+]
