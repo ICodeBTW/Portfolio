@@ -4,6 +4,7 @@ export type Link = {
   href: string;
   classes: string;
   target: astroHTML.JSX.HTMLAttributeAnchorTarget;
+  trackEvent?: string; // Make tracking event configurable
 };
 
 interface Props {
@@ -13,6 +14,28 @@ interface Props {
 const { link, ...rest } = Astro.props;
 ---
 
-<a href={link.href} class:list={[link.classes]} target={link.target} {...rest}>
+<a
+  href={link.href}
+  class:list={[link.classes]}
+  target={link.target}
+  data-track-event={link.trackEvent || "Link Clicked"}
+  {...rest}
+>
   <Fragment set:html={link.content} />
 </a>
+
+<script>
+  import { track } from "@vercel/analytics";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const trackableLinks = document.querySelectorAll("[data-track-event]");
+
+    trackableLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const trackEvent = e.currentTarget.getAttribute("data-track-event");
+        console.log(`Tracking: ${trackEvent}`);
+        track(trackEvent);
+      });
+    });
+  });
+</script>
