@@ -32,8 +32,7 @@ const { link, ...rest } = Astro.props;
 
     trackableLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
-        const trackEvent = e.currentTarget.getAttribute("data-track-event");
-        console.log(`Tracking: ${trackEvent}`);
+        const trackEvent = e.currentTarget?.getAttribute("data-track-event");
         track(trackEvent);
       });
     });
